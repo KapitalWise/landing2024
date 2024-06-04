@@ -1,0 +1,155 @@
+@media (max-width: 991px) {
+    #blogFeatures .rightContent .featuresSingleItem {
+        margin-bottom: 20px;
+    }
+
+    #deploymentOptions .mainWrapper .itemBox {
+        width: 100%;
+        min-height: 350px;
+    }
+
+    #blogFeatures .leftContent {
+        margin-bottom: 30px;
+    }
+
+    #freeUnlimited02 {
+        .rightContent {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    // brand slider dots
+    .brand__area {
+        .owl-dots {
+            text-align: center;
+            margin-top: 20px;
+
+            .owl-dot {
+                height: 15px;
+                width: 15px;
+                background-color: #f8b60069;
+                margin: 0px 10px;
+                border-radius: 50%;
+                transition: 0.4s;
+            }
+
+            .active {
+                background-color: #F8B400;
+            }
+        }
+    }
+
+    #hero__baner_new .banner_content {
+        padding: 80px 0px;
+    }
+
+    #hero__baner_new::before {
+        width: 100%;
+        height: 50%;
+    }
+
+    #hero__baner_new::after {
+        top: inherit;
+        bottom: 0;
+        left: 0;
+        right: inherit;
+        width: 100%;
+        height: 50%;
+    }
+
+    #hero__baner_new .banner_content.right {
+        padding-left: 0px;
+    }
+
+    #hero__baner_new .leftShape {
+        height: 300px;
+        width: 300px;
+        border: 1px solid #ffffffb2;
+        bottom: inherit;
+        left: inherit;
+        transform: translateY(-50%);
+        top: 50%;
+        right: -150px;
+    }
+
+    #about__us .newLayoutFeatures .leftInfo h3 {
+        br {
+            display: none;
+        }
+
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    #about__us .newLayoutFeatures .rightInfo {
+        margin-top: 40px;
+    }
+
+    #about__us .newLayoutFeatures .leftInfo p {
+        margin-top: 13px;
+        font-size: 16px;
+        line-height: 26px;
+        width: 100%;
+    }
+
+    #new2quoteBox .quoteBoxContainer {
+        padding: 40px 0px;
+    }
+
+    #testmonialNew .slider__wrapper .slider__item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #testmonialNew .slider__wrapper .slider__item .contentBox p {
+        font-size: 19px;
+        line-height: 29px;
+    }
+
+    #testmonialNew .slider__wrapper {
+        padding-top: 0px;
+    }
+
+    #howToWorkNew .main__wrapper::after {
+        display: none;
+    }
+
+    #subscribeBoxNew .leftInfo {
+        text-align: center;
+    }
+
+    #subscribeBoxNew .leftInfo h3 {
+        line-height: 31px;
+    }
+
+    #subscribeBoxNew .subsform {
+        margin-top: 30px;
+    }
+
+    .saleswiseNewBanner .left_content {
+        text-align: center;
+
+        h6 {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .saleswiseNewBanner .right_image {
+        text-align: center;
+        margin-top: 30px;
+
+        img {
+            margin-right: 0px;
+        }
+    }
+}

@@ -1,0 +1,389 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+   <meta charset="utf-8">
+   <title>Kapitalwise - Book a meeting, Request Demo </title>
+      <meta name="description" content="Kapitalwise offers a unified client acquisition and retention platform for Financial Institutions.
+Kapitalwise platform helps financial institutions to acquire and retain customers by connecting data, content, and interfacing.">
+    <meta property="og:title" content="Unified Client Acquisition and Retention Platform for Financial Institutions">
+    <meta property="og:image" content="asset/img/kapitalwise-logo-LinkedIn@3x.jpg">
+    <meta property="og:site_name" content="Kapitalwise.com">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Kapitalwise offers a unified client acquisition and retention platform for Financial Institutions. Kapitalwise platform helps financial institutions to acquire and retain customers by connecting data, content, and interfacing.">
+    <meta property="og:url" content="https://www.kapitalwise.com/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Favicons -->
+   <link rel="icon" href="asset/img/favicons/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Favicons -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Favicons -->
+
+   <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+   <link rel="stylesheet" href="asset/css/fontawsome.min.css">
+   <link rel="stylesheet" href="asset/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="asset/css/style.css">
+   <link rel="stylesheet" href="asset/css/responsive.css">
+   <script src="asset/js/vendor/jquery-3.3.1.min.js"></script>
+
+   <!-- this is for mordanizar js link -->
+   <script src="asset/js/vendor/modernizr-3.6.0.min.js"></script>
+   <script src='https://kw-prod-cdn.s3.amazonaws.com/v1.0/analytics.js'></script>
+    <!-- www.kapitalwise.com analytics, add this trigger script for analytics -->
+    <script> kw_web('61683507f8375600914e9ec9') </script>
+    <script> kw_trigger('61e839e1f4d486008fe8f38f') </script>
+    <!-- KW Site Visit Event, add this event script for every new event created --> 
+    <script> kw('618eb082f499a4008f61bcea') </script> 
+    <script> kw_event('61f72baa78be1e008fe68dbe') </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5E6K6VZDPB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5E6K6VZDPB');
+    </script>
+
+    <script>
+   $( document ).ready(function() {//
+
+    $( "#req-demo" ).bind( "click", function() {
+         var v_email = $( "#email" ).val();
+         var v_name = $( "#name" ).val();
+         var v_reason = $( "#reason" ).val();
+         if (isEmail(v_email))
+         {
+            $.post( "https://kapitalwise.com/requestDemo",
+               {
+                  "name": v_name,
+                   "email": v_email,
+                   "description": v_reason
+               }
+               ,function() {
+            
+
+               }).done(function() {
+                
+                });
+            $( "#thankyou" ).show();
+            $( "#email" ).val('');
+            $( "#name" ).val('');
+            $( "#reason" ).val('');
+         }
+       });
+    });
+ 
+    function isEmail(email) {
+     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+     return regex.test(email);
+    }
+
+    function mySubmitFunction(e) {
+     e.preventDefault();
+     return false;
+    }
+</script>
+</head>
+
+<body>
+   <!-- ========== Start header area ========== -->
+    <header id="header__top">
+      <!-- <div class="col-12">
+               <div class="message__box">
+                  Financial publishers and influencers: Elevate your earnings by integrating the <b><a href='./products/advisorconnect.html'>AdvisorConnect</a></b> widget into your content.
+               </div>
+      </div> -->
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-xl-4 col-lg-4 col-md-3">
+               <div class="logo__box">
+                  <a href="./index.html">
+                     <img class="img-fluid" src="./asset/img/logo.svg" alt="">
+                  </a>
+               </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-9">
+               <div class="menu__box">
+                  <nav class="text-end">
+                     <ul>
+                        <li>
+                           <div class="dropdown">
+                              <button class="menu__drop__btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                 Products <span class="drop-icon"><i class="fa-light fa-angle-down"></i></span>
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenuButton1">
+                                 <div class="dropdown__title text-center">
+                                    <h4>Products can be used together or individually</h4>
+                                 </div>
+                                 <div class="mega__menu__wrapper">
+                                    <div class="row">
+                                       <div class="col-xl-6 col-lg-6">
+                                          <div class="mega__menu__item d-flex">
+                                             <div class="icon">
+                                                <img class="img-fluid" style="max-width:50%;"  src="./asset/img/icons/data-analytics.png" alt="Saleswise">
+                                             </div>
+                                             <div class="content">
+                                                <h4>Pre-qualified Leads</h4>
+                                                <p>Boost your client acquisition with pre-qualified and vetted financial leads.</p>
+                                                <div class="linkBtn d-flex align-items-center">
+                                                   <a href="./products/saleswise.html" class="d-flex align-items-center">Learn More</a>
+                                                   <i class="fa-regular fa-arrow-right-long"></i>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col-xl-6 col-lg-6">
+                                          <div class="mega__menu__item d-flex">
+                                             <div class="icon">
+                                                <img class="img-fluid" style="max-width:50%;" src="./asset/img/icons/credit-insight.png" alt="Signalwise">
+                                             </div>
+                                             <div class="content">
+                                                <h4>Engagement Builder</h4>
+                                                <p>Convert your contacts and leads into revenue through an easy-to-use client engagement builder platform.</p>
+                                                <div class="linkBtn d-flex align-items-center">
+                                                   <a href="./products/marketingwise.html" class="d-flex align-items-center">Learn More</a>
+                                                   <i class="fa-regular fa-arrow-right-long"></i>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col-xl-6 col-lg-6">
+                                          <div class="mega__menu__item d-flex">
+                                             <div class="icon">
+                                                <img class="img-fluid" style="max-width:50%;"   src="./asset/img/icons/web.png" alt="Marketingwise">
+                                             </div>
+                                             <div class="content">
+                                                <h4>Connect Widgets for Publishers</h4>
+                                                <p>Elevate your earnings by adding the Connect Widget to your content.</p>
+                                                <div class="linkBtn d-flex align-items-center">
+                                                   <a href="./products/advisorconnect.html" class="d-flex align-items-center">Learn More</a>
+                                                   <i class="fa-regular fa-arrow-right-long"></i>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        <li>
+                           <a href="./pricing/master.html">Pricing</a>
+                        </li>
+                        <li>
+                           <a href="https://app.kapitalwise.com" target="_blank">Customer Login</a>
+                        </li>
+                        <li>
+                           <a href="https://www.kapitalwise.com/blogs/" target="_blank">Blog</a>
+                        </li>
+                        <li class="btn__touch">
+                           <a href="./demo.html" class="text-uppercase">GET IN TOUCH</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- ========== End header area ========== -->
+   <!-- ========== Start mobile menu area ========== -->
+   <div id="mobileMenu">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-5">
+               <div class="logo__box">
+                  <a href="index.html">
+                     <img class="img-fluid" src="./asset/img/logo.svg" alt="">
+                  </a>
+               </div>
+            </div>
+            <div class="col-7">
+               <div class="mobileMenuToggle text-end">
+                  <button type="button">
+                     <i class="fa-regular fa-bars"></i>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- ========== End mobile menu area ========== -->
+   <!-- ========== Start mobile menu content ========== -->
+   <div id="mobileMenuContent">
+      <button type="button" class="menuClose">
+         <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+      <div class="MenuContent">
+         <nav>
+            <ul>
+               <li>
+                  <a class="subMenuLink" data-bs-toggle="collapse" href="#subMenuMobile" role="button" aria-expanded="false" aria-controls="collapseExample">
+                     Products
+                  </a>
+                  <div class="collapse" id="subMenuMobile">
+                     <div class="subMenuWrapper">
+                        <ul>
+                           <li>
+                              <a href="./products/saleswise.html">
+                                 Pre-qualified Leads
+                                 <span><i class="fa-regular fa-arrow-right"></i></span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="./products/marketingwise.html">
+                                 Engagement Builder
+                                 <span><i class="fa-regular fa-arrow-right"></i></span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="./products/advisorconnect.html">
+                                 Connect Widgets for Publishers
+                                 <span><i class="fa-regular fa-arrow-right"></i></span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                   </div>
+               </li>
+               <li>
+                  <a href="./pricing/master.html">Pricing</a>
+               </li>
+               <li>
+                  <a href="https://www.kapitalwise.com/blogs/" target="_blank">Blog</a>
+               </li>
+            </ul>
+            <div class="spMenu">
+               <a href="./demo.html">Get in touch</a>
+            </div>
+         </nav>
+      </div>
+   </div>
+   <!-- ========== End mobile menu content ========== -->
+   <!-- ========== Start request demo main area ========== -->
+   <section id="requestDemo">
+      <img class="quoteBg" src="./asset/img/quote-bg.png" alt="">
+      <div class="container">
+         <div class="row requestDemoRow">
+               
+               <div class="col-xl-5 col-lg-5">
+                  <div class="contactFormArea">
+                   <h5 id="thankyou" style="margin-top: 30px; color:#2C40CE; text-align:center; display:none;">We will be in touch shortly! </h5>
+
+                    <form  method="" autocomplete="off" id="requestdemo" onsubmit="return mySubmitFunction(event)">
+                     <div class="form__title">
+                        <h3>Contact us</h3>
+                     </div>
+                     <div class="form__box">
+                        <div class="inputBox">
+                           <label>Name*</label>
+                           <input type="text" id="name" placeholder="" name="name" required>
+                        </div>
+                        <div class="inputBox">
+                           <label>Email*</label>
+                           <input type="email" id="email" placeholder="" name="email" required>
+                        </div>
+                        <div class="inputBox">
+                           <label>How can we help?</label>
+                           <textarea name="text" id="reason" placeholder="" spellcheck="false" ></textarea>
+                        </div>
+                        <div class="submit__action">
+                           <button type="submit" id="req-demo">Contact us</button>
+                        </div>
+                     </div>
+                     </form>
+                  </div>
+               </div>
+      
+            <div class="col-xl-7 col-lg-7">
+               <div class="datePickerForm">
+                  <div class="datepickerBox">
+                     <div class="topInfo text-center">
+<!--                         <h4>Book a demo</h4>
+ -->                        <p>Meet with Jessica</p>
+                     </div>
+                     <div class="">
+                     <!-- Calendly inline widget begin -->
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/jessica-kw?text_color=111424&primary_color=2c40ce" style="min-width:320px;height:500px;"></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        <!-- Calendly inline widget end -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ========== End request demo main area ========== -->
+    <!-- ========== Start footer area ========== -->
+   <footer id="footer" class="new">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <div class="footer_item_wrapper">
+                  <div class="logo_area">
+                     <a href="index.html">
+                        <img class="img-fluid" src="asset/img/logo.svg" alt="">
+                     </a>
+                        <p>Client Acquisition and Retention Platform <br>for Financial Professionals.</p>
+                     <div class="follow_us_area_new">
+                        <h4>Follow:</h4>
+                        <ul>
+                           <li><a href="https://www.linkedin.com/company/kapitalwise/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                           <li><a href="https://twitter.com/kapitalwise" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="link_area">
+                     <h4>Products</h4>
+                     <ul>
+                        <li><a href="./products/saleswise.html">Pre-qualified Leads</a></li>
+                        <li><a href="./products/marketingwise.html">Engagement Builder</a></li>
+                        <li><a href="./products/advisorconnect.html">Connect Widgets</a></li>
+                     </ul>
+                  </div>
+                  <div class="link_area">
+                     <h4>Resources</h4>
+                     <ul>
+                        <li><a href="https://www.kapitalwise.com/blogs/" target="_blank">Blogs</a></li>
+                     </ul>
+                     <ul>
+                        <li><a href="https://kapitalwise.com/user-guide/" target="_blank">Support Documentation</a></li>
+                     </ul>
+                     <ul>
+                        <li><a href="mailto:support@kapitalwise.com" target="_blank">Contact Support</a></li>
+                     </ul>
+                     <ul>
+                        <li><a href="./TermsAndConditions.html" target="_blank">Terms of Service</a></li>
+                     </ul>
+                     <ul>
+                        <li><a href="./PrivacyPolicy.html" target="_blank">Privacy Policy</a></li>
+                     </ul>
+                  </div>
+                  <div class="link_area">  
+                     <h4>Contact</h4>
+                     <ul>
+                        <li><a href="#">43 W 23rd St. 6th Fl.</a></li>
+                        <li><a href="#"> New York, NY, 10010</a></li>
+                        <li><a href="#">+1.862.263.0788</a></li>
+                        <li><a href="mailto:info@kapitalwise.com" target="_blank">info@kapitalwise.com</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- ========== End footer area ========== -->
+   <!-- all javascript load here -->
+   <script src="asset/js/bootstrap.bundle.min.js"></script>
+   <script src="asset/js/plugin/owl.carousel.min.js"></script>
+   <script src="./asset/js/plugin/calendar.min.js"></script>
+   <script src="asset/js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+    .title-xl {
+        font-size: 26px;
+    }
+
+    #hero__baner {
+        padding-top: 30px;
+        padding-bottom: 100px;
+
+        .banner__image {
+            position: relative;
+            top: 100px;
+        }
+
+        .content {
+            h1 {
+                width: auto;
+                font-size: 37px;
+                line-height: 48px;
+            }
+
+            h5 {
+                font-size: 17px;
+                line-height: 26px;
+            }
+
+            a {
+                font-size: 15px;
+            }
+        }
+    }
+
+    #serviceFeatures {
+        padding-bottom: 50px;
+
+        .main__wrapper {
+            .item__box {
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    #howToWork {
+        padding-top: 0px;
+
+        .single__item {
+            h3 {
+                font-size: 20px !important;
+            }
+
+            p {
+                font-size: 15px !important;
+            }
+        }
+    }
+
+    #requestDemo .datePickerForm .datepickerBox {
+        width: 80%;
+        padding: 40px 20px;
+    }
+
+    #requestDemo .quoteBg {
+        z-index: -1;
+    }
+
+    #requestDemo .contactFormArea .form__box {
+        width: 100%;
+    }
+
+    .pricing__banner__slider__active .slider__item .slider__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0px;
+    }
+
+    .pricing__banner__slider__active .slider__item .shape__box1,
+    .pricing__banner__slider__active .slider__item .shape__box2,
+    .pricing__banner__slider__active .slider__item .shape__box3,
+    .pricing__banner__slider__active .slider__item .shape__box4,
+    .pricing__banner__slider__active .slider__item .shape__box5,
+    .pricing__banner__slider__active .slider__item .shape__box6,
+    .pricing__banner__slider__active .slider__item .shape__box7,
+    .pricing__banner__slider__active .slider__item .shape__box__8 {
+        display: none !important;
+    }
+
+    #blogFeatures .rightContent .featuresSingleItem {
+        margin-bottom: 20px;
+    }
+
+    #deploymentOptions .mainWrapper .itemBox {
+        width: 100%;
+        min-height: 350px;
+    }
+
+    #freeUnlimited02 {
+        .rightContent {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    #about__us .new_about_information .bg_box_info {
+        padding-bottom: 20px;
+    }
+
+    #about__us .new_about_information .bg_box_info .single_inner_box .image_box {
+        margin-bottom: 40px;
+    }
+
+    #about__us .new_about_information .bg_box_info .single_inner_box .image_box h4 {
+        font-size: 21px;
+    }
+
+    #new_feauter_area .bg_feater_box {
+        background-color: #F8F9FF;
+        padding: 40px 60px 0px 60px;
+    }
+
+    #new_feauter_area .bg_feater_box .main_wrapper_area .single_item .content_box p {
+        width: 100%;
+    }
+
+    #new_cta_area .bg_box_area {
+        padding: 0px 50px;
+    }
+
+    #new_features_2_area .main_wrapper .single_item {
+        height: 100%;
+    }
+
+    #new_features_2_area .main_wrapper .single_item .content p {
+        width: 100%;
+    }
+
+    #hero__baner_new .banner_content {
+        padding: 70px 0px;
+    }
+
+    #hero__baner_new .banner_content h2 {
+        font-size: 20px;
+    }
+
+    #hero__baner_new .banner_content p {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 25px;
+        width: 100%;
+    }
+
+    #hero__baner_new .banner_content a {
+        font-size: 13px;
+    }
+
+    #hero__baner_new .leftShape {
+        height: 200px;
+        width: 200px;
+        bottom: -100px;
+    }
+
+    #hero__baner_new .rightShape {
+        height: 200px;
+        width: 200px;
+        bottom: -100px;
+        right: -100px;
+    }
+
+    #about__us .newLayoutFeatures .leftInfo h3 {
+        br {
+            display: none;
+        }
+    }
+
+    #about__us .newLayoutFeatures .leftInfo h3 {
+        font-size: 20px;
+        line-height: 31px;
+    }
+
+    #about__us .newLayoutFeatures .leftInfo p {
+        margin-top: 15px;
+        font-size: 15px;
+        line-height: 25px;
+        width: 100%;
+    }
+
+    #about__us .newLayoutFeatures .rightInfo .singleItem .content p {
+        font-size: 14px;
+    }
+
+    #about__us .newLayoutFeatures .rightInfo .singleItem .number {
+        font-size: 15px;
+    }
+
+    #new2quoteBox .quoteBoxContent h3 {
+        font-size: 23px;
+    }
+
+    #new2quoteBox .quoteBoxContent p {
+        font-size: 14px;
+    }
+
+    #testmonialNew .slider__wrapper .slider__item .contentBox p {
+        font-size: 16px;
+        line-height: 29px;
+    }
+
+    #howToWorkNew {
+        padding-top: 0px;
+
+        .single__item {
+            h3 {
+                font-size: 20px !important;
+            }
+
+            p {
+                font-size: 15px !important;
+            }
+        }
+    }
+
+
+    .saleswiseNewBanner .left_content h1 {
+        font-size: 35px;
+        line-height: 49px;
+
+        br {
+            display: none;
+        }
+    }
+
+    .saleswiseNewBanner .left_content p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    #new_1_about .newAboutWrapper {
+        padding: 40px 43px;
+    }
+
+    #new_1_about .newAboutWrapper .leftInfo p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    #new_1_about_2 .itemWrapper .singleItem .content p {
+        width: 97%;
+    }
+
+    #newFeaturePrice .itemWrapper>.row {
+        row-gap: 30px;
+    }
+
+    #newFeaturePrice .itemWrapper .singleItem {
+        height: 100%;
+    }
+
+    .newIntregationArea .innerWrapper {
+        padding: 60px 100px;
+    }
+
+    #newDeploymentOptions .itemWrapper>.row {
+        row-gap: 30px;
+    }
+
+    #newDeploymentOptions .itemWrapper .singleItem {
+        height: 100%;
+        padding: 25px;
+    }
+
+    #new_1_about {
+        padding: 80px 0px;
+    }
+
+    #new_1_about_2 {
+        padding: 0px 0px 80px 0px;
+    }
+
+    #newFeaturePrice {
+        padding: 80px 0px;
+    }
+
+    .newIntregationArea {
+        padding: 0px 0px 80px 0px;
+    }
+
+    #newDeploymentOptions {
+        padding: 0px 0px 80px 0px;
+    }
+}

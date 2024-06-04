@@ -1,0 +1,477 @@
+#globalBaner {
+    padding-top: 100px;
+    overflow: hidden;
+
+    .leftImage {
+        position: relative;
+        top: 25px;
+
+        img {
+            width: 80%;
+            float: right;
+        }
+    }
+
+    .rightImage {
+        position: relative;
+        top: 25px;
+
+        img {
+            width: 80%;
+            float: left;
+        }
+    }
+
+    .middleImage {
+        margin-top: 25px;
+        position: relative;
+        top: 25px;
+
+        img {
+            width: 40%;
+        }
+    }
+
+    img {
+        border-radius: 18px;
+    }
+
+    .content {
+        .tag__line {
+            background-color: #F8B400;
+            border: none;
+            font-weight: 500;
+            font-size: 17px;
+            color: #fff;
+            padding: 10px 30px;
+            border-radius: 7px;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-weight: 700;
+            font-size: 38px;
+            color: #fff;
+        }
+
+        h5 {
+            margin: 0 auto;
+            margin-top: 20px;
+            color: #fff;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 40px;
+        }
+    }
+}
+
+#globalBaner.globalBaner2 {
+    padding: 100px 0px !important;
+}
+
+#globalBaner.globalBaner3 {
+    padding: 70px 0px 140px 0px !important;
+
+    .leftImage {
+        img {
+            width: 60%;
+        }
+    }
+
+    .rightImage {
+        position: relative;
+        top: 150px;
+        right: 170px;
+    }
+}
+
+#globalBaner.globalBaner4 {
+    padding-top: 60px;
+
+    .middleImage2 {
+        margin-top: 50px;
+        position: relative;
+        top: 20px;
+
+        img {
+            width: 40% !important;
+        }
+    }
+}
+
+#globalBaner.globalBaner5 {
+    padding-bottom: 100px;
+
+    .left_content {
+        h1 {
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 50px;
+        }
+
+        p {
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        .calaim_button {
+            background-color: $brand;
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            height: 100%;
+            padding: 14px 50px;
+            border: none;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 30px;
+            outline: none;
+            box-shadow: none;
+
+            &:hover {
+                background-color: $brand-hover;
+            }
+        }
+    }
+
+    .right_form_content {
+        background-color: #fff;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 30px;
+        width: 90%;
+        float: right;
+
+        .top_info {
+            margin-bottom: 20px;
+
+            h4 {
+                font-weight: 500;
+                font-size: 20px;
+            }
+        }
+
+        .form_box_area {
+            .input_box {
+                .form-control {
+                    border: 1px solid #707070;
+                    height: 48px;
+                    outline: none;
+                    box-shadow: none;
+                    font-weight: 500;
+                    color: #141727;
+                    font-size: 15px;
+                    padding: 0px 20px;
+                }
+            }
+
+            .submit_actions {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+
+                .s_actions {
+                    background-color: $brand;
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 15px;
+                    height: 100%;
+                    padding: 14px 50px;
+                    border: none;
+                    border-radius: 8px;
+                    display: inline-block;
+                    outline: none;
+                    box-shadow: none;
+
+                    &:hover {
+                        background-color: $brand-hover;
+                    }
+                }
+            }
+        }
+
+        .bottom_info {
+            margin-top: 20px;
+            background-color: #F3F5FF;
+            padding: 20px 30px;
+            border-radius: 8px;
+
+            h4 {
+                font-weight: 400;
+                font-size: 18px;
+                color: #616161;
+                line-height: 28px;
+
+                span {
+                    color: $brand;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    #globalBaner {
+        padding-top: 50px;
+        overflow: hidden;
+    }
+
+    #globalBaner .content h1 {
+        font-size: 28px;
+    }
+
+    #globalBaner .content h5 {
+        font-size: 16px;
+        line-height: 31px;
+    }
+
+    #globalBaner .leftImage img {
+        width: 100%;
+        float: right;
+    }
+
+    #globalBaner .rightImage img {
+        width: 100%;
+        float: left;
+    }
+
+    #globalBaner .middleImage img {
+        width: 58%;
+    }
+
+    #globalBaner.globalBaner5 .right_form_content {
+        padding: 20px;
+        width: 100%;
+    }
+
+    #globalBaner.globalBaner5 .left_content h1 {
+        font-size: 30px;
+        line-height: 41px;
+    }
+
+    #globalBaner.globalBaner5 .left_content p {
+        font-size: 17px;
+        line-height: 28px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1700px) {
+    #globalBaner.globalBaner3 .rightImage {
+        position: relative;
+        top: 150px;
+        right: 70px;
+    }
+
+    #globalBaner.globalBaner3 .leftImage img {
+        width: 81%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1350px) {
+    #globalBaner .leftImage img {
+        width: 100%;
+        float: right;
+    }
+
+    #globalBaner .rightImage img {
+        width: 100%;
+        float: left;
+    }
+
+    #globalBaner .middleImage img {
+        width: 54%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    #globalBaner.globalBaner3 .rightImage {
+        top: 125px;
+        right: 0px;
+    }
+
+    #globalBaner.globalBaner3 .leftImage img {
+        width: 86%;
+    }
+
+    #globalBaner.globalBaner3 .rightImage img {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #globalBaner.globalBaner2 .leftImage img {
+        width: 100%;
+        float: right;
+    }
+
+    #globalBaner.globalBaner2 .rightImage img {
+        width: 100%;
+        float: left;
+    }
+
+    #globalBaner.globalBaner3 {
+        padding: 70px 0px 70px 0px !important;
+    }
+
+    #globalBaner.globalBaner5 .left_content h1 {
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+    #globalBaner.globalBaner5 .left_content p {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 23px;
+    }
+
+    #globalBaner.globalBaner5 .left_content .calaim_button {
+        font-size: 13px;
+    }
+
+    #globalBaner.globalBaner5 .right_form_content {
+        padding: 15px;
+        width: 100%;
+    }
+
+    #globalBaner.globalBaner5 .right_form_content .top_info h4 {
+        font-size: 17px;
+    }
+
+    #globalBaner.globalBaner5 .right_form_content .form_box_area .submit_actions .s_actions {
+        font-size: 13px;
+    }
+
+    #globalBaner.globalBaner5 .right_form_content .bottom_info {
+        padding: 20px 20px;
+    }
+
+    #globalBaner.globalBaner5 .right_form_content .bottom_info h4 {
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+
+
+@media (max-width: 991px) {
+    #globalBaner {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        overflow: hidden;
+    }
+
+    #globalBaner .content h1 {
+        font-size: 28px;
+    }
+
+    #globalBaner .content h5 {
+        font-size: 16px;
+        line-height: 31px;
+    }
+
+    .hide__sp {
+        display: none !important;
+    }
+
+    #globalBaner.globalBaner4 {
+        padding-bottom: 0px;
+    }
+
+    #globalBaner.globalBaner4 .middleImage2 img {
+        width: 51% !important;
+    }
+
+    #globalBaner.globalBaner4 .middleImage2 {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hide__mobile {
+        display: none;
+    }
+
+    #globalBaner.globalBaner3 {
+        padding: 70px 0px 70px 0px !important;
+    }
+
+    #globalBaner.globalBaner5 .right_form_content {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    #globalBaner.globalBaner5 .left_content h1 {
+        font-size: 28px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    #globalBaner.globalBaner5 .left_content p {
+        margin-top: 17px;
+        font-size: 17px;
+        line-height: 26px;
+        text-align: center;
+    }
+
+    #globalBaner.globalBaner5 .left_content .calaim_button {
+        margin: 0 auto;
+        margin-top: 30px;
+        display: table;
+    }
+
+
+}
+
+@media (max-width: 575px) {
+    #globalBaner.globalBaner5 {
+        padding-top: 30px;
+    }
+
+    #globalBaner.globalBaner5 .right_form_content {
+        padding: 20px;
+    }
+
+    #globalBaner.globalBaner5 .right_form_content .form_box_area .submit_actions .s_actions {
+        width: 100%;
+    }
+
+    #globalBaner.globalBaner5 .right_form_content .bottom_info {
+        margin-top: 20px;
+        padding: 15px 21px;
+    }
+
+    #globalBaner.globalBaner5 .right_form_content .bottom_info h4 {
+        font-size: 15px;
+        line-height: 23px;
+    }
+
+    .mobile_padding {
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+
+    #globalBaner.globalBaner5 .left_content h1 {
+        font-size: 22px;
+        line-height: 31px;
+    }
+
+    #globalBaner.globalBaner5 .left_content .calaim_button {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    #globalBaner.globalBaner5 .left_content p {
+        margin-top: 13px;
+        font-size: 15px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    #globalBaner.globalBaner5 {
+        padding-bottom: 30px;
+    }
+}

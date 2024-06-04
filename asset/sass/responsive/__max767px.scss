@@ -1,0 +1,109 @@
+@media (max-width: 767px) {
+    #mobileMenu {
+        display: block;
+    }
+
+    #mobileMenuContent {
+        display: block;
+    }
+
+    .mobile_flip_content {
+        flex-direction: column-reverse;
+    }
+
+    #new_1_about .newAboutWrapper {
+        padding: 30px 40px;
+    }
+
+    #new_1_about .newAboutWrapper .leftInfo h3 {
+        font-size: 26px;
+    }
+
+    #new_1_about .newAboutWrapper .leftInfo p {
+        font-size: 17px;
+        line-height: 27px;
+    }
+
+    #new_1_about .newAboutWrapper .rightContent {
+        margin-top: 30px;
+    }
+
+    #new_1_about .newAboutWrapper .rightContent .singleItem h5 {
+        font-size: 28px;
+    }
+
+    #new_1_about .newAboutWrapper .rightContent .singleItem p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    #new_1_about_2 .sec_heading h3 {
+        font-size: 29px;
+        line-height: 41px;
+
+        br {
+            display: none;
+        }
+    }
+
+    #new_1_about .newAboutWrapper {
+        padding: 40px 50px;
+    }
+
+    #new_1_about .newAboutWrapper .rightContent {
+        margin-top: 40px;
+    }
+
+    #new_1_about_2 .row.align-items-center {
+        flex-direction: column-reverse;
+    }
+
+    #new_1_about_2 .sec_heading h3 {
+        text-align: center;
+    }
+
+    #new_1_about_2 .itemWrapper {
+        margin-top: 50px;
+    }
+
+    #new_1_about_2 {
+        .rightImage {
+            text-align: center;
+
+            img {
+                width: 90%;
+            }
+        }
+    }
+
+    #newFeaturePrice .itemWrapper .singleItem .content p {
+        width: 100%;
+    }
+
+    #newFeaturePrice .itemWrapper .singleItem .content h4 {
+        font-size: 22px;
+    }
+
+    .newIntregationArea .innerWrapper {
+        padding: 30px 40px;
+    }
+
+    .newIntregationArea .innerWrapper .sec_title p {
+        font-size: 16px;
+        line-height: 26px;
+        width: 100%;
+    }
+
+    .newIntregationArea .innerWrapper .itemWrapper .singleItem h6 {
+        font-size: 18px;
+    }
+
+    #newDeploymentOptions .itemWrapper .singleItem {
+        margin-bottom: 25px;
+    }
+
+    #newDeploymentOptions .itemWrapper .singleItem :last-child {
+        margin-bottom: 0px;
+    }
+
+}
