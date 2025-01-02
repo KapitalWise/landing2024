@@ -2,7 +2,7 @@
 
 
  $( document ).ready(function() { 
-      var essentialAmmount = 400;  
+      var essentialAmmount = 200;  
       var essentialMoAmmount = calculateMonthly(essentialAmmount);
       var formatter = new Intl.NumberFormat('en-US', {
               style: 'currency',
@@ -49,12 +49,12 @@
                $('#marketingHoursTxt').html("Free 90 Minutes Monthly Marketing and Content Strategy Consultation");
                $('#marketingHours').show();
             }
-            essentialAmmount = 400;  
+            essentialAmmount = 200;  
 
         
             if($(this).val()>2 &&$(this).val()<=102)
             {
-                essentialAmmount = 400+(($(this).val()-2) *16);                
+                essentialAmmount = 200+(($(this).val()-2) *16);                
             }
             if($(this).val()>102 &&$(this).val()<=202)
             {
