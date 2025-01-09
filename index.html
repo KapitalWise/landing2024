@@ -283,7 +283,7 @@ Kapitalwise platform helps financial institutions to acquire and retain customer
    <!-- ========== Start hero baner area ========== -->
    <section id="hero__baner" class="clac__" style="position: relative;">
       <div class="container">
-         <div class="row">
+         <div class="row" style="align-items:center;">
             <div class="col-xl-6 col-lg-6">
                <div class="content">
                   <h1>The Leading Marketplace for High-intent Investor Prospects</h1>
@@ -292,7 +292,7 @@ Kapitalwise platform helps financial institutions to acquire and retain customer
                   <a class="right_button" href="https://app.kapitalwise.com/signup?isPublisher=true">Affiliate Signup</a>
                </div>
             </div>
-            <div class="col-xl-6 col-lg-6">
+            <div class="col-xl-6 col-lg-6" style="display: flex;justify-content: center; padding: 20px;">
                <div class="banner__image" style="display: flex;">
                   <div class="calculator">
 
@@ -348,7 +348,7 @@ Kapitalwise platform helps financial institutions to acquire and retain customer
                          <input type="range" id="initialFee" min="0" max="10" step="0.1" value="1.5" oninput="updateAndCalculate('initialFee', this)">
                      </div>
              
-                     <div class="slider-container">
+                     <!-- <div class="slider-container">
                         <div class="slider-label-wrap">
                    
 
@@ -357,7 +357,7 @@ Kapitalwise platform helps financial institutions to acquire and retain customer
                          <output id="ongoingFee-output">0</output>
                         </div>
                          <input type="range" id="ongoingFee" min="0" max="50000" step="1" value="0" oninput="updateAndCalculate('ongoingFee', this)">
-                     </div>
+                     </div> -->
                      <div style="padding-top: 30px; padding-bottom: 10px;justify-content: center;display: flex;">
                         <a id="kw_lender_link" href ='/demo.html'>
                            Book a Demo to Get Started
@@ -431,7 +431,7 @@ fetch(
                          const tenure = parseFloat(document.getElementById('tenure').value);
                          const conversionRate = parseFloat(document.getElementById('conversionRate').value);
                          const initialFee = parseFloat(document.getElementById('initialFee').value);
-                         const ongoingFee = parseFloat(document.getElementById('ongoingFee').value);
+                         const ongoingFee = 0;
              
                          function calculateEarnings(leadsPerMonth, avgClientAssets, initEngagementFee, ongoingYearlyFee, leadsConversionRate, tenureYears) {
                              avgClientAssets *= 1000;

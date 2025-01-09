@@ -47,6 +47,15 @@ font-weight: 600;
     }
   }
 
+  @media (min-width: 792px ) and (max-width: 1201px){
+
+    .calculator {
+      min-width: 400px;
+
+  }
+  
+  }
+
   
 @media (max-width: 991px)  {
 .calculator {
@@ -79,7 +88,7 @@ margin-left: auto;
 }
 h2, h3 {
 text-align: center;
-color: #0E172A;
+color: #141727;
 }
 .slider-container {
 /* margin: 20px 0; */
@@ -102,7 +111,7 @@ width: 100%;
 height: 6px;
 border-radius: 5px;
 outline: none;
-background: linear-gradient(to right, #0E172A 0%, #0E172A 50%, #eee 50%, #eee 100%);
+background: linear-gradient(to right, #141727 0%, #141727 50%, #eee 50%, #eee 100%);
 }
 .slider-container input[type="range"]::-webkit-slider-runnable-track {
 height: 5px;
@@ -125,7 +134,7 @@ appearance: none;
 width: 20px;
 height: 20px;
 background: #fff;
-border: 2px solid #0E172A;
+border: 2px solid #141727;
 border-radius: 50%;
 margin-top: -8px;
 cursor: pointer;
@@ -138,7 +147,7 @@ content: "sss";
 width: 20px;
 height: 20px;
 background: #eee;
-border: 2px solid #0E172A;
+border: 2px solid #141727;
 border-radius: 50%;
 cursor: pointer;
 }
@@ -146,18 +155,21 @@ cursor: pointer;
 width: 20px;
 height: 20px;
 background: #eee;
-border: 2px solid #0E172A;
+border: 2px solid #141727;
 border-radius: 50%;
 cursor: pointer;
 }
-.slider-container output {
-display: block;
-text-align: center;
-font-weight: bold;
-margin: 3px 10px;
-font-style: italic;
-font-weight: 200;
+  .slider-container output {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+    font-style: italic;
+    font-weight: 200;
+    margin-top: 2px;
+    margin-left: 10px;
 }
+
 #result {
 margin-bottom: 10px;
 font-size: 16px;
