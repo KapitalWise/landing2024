@@ -165,9 +165,9 @@ cursor: pointer;
     font-weight: bold;
     margin: 0px;
     font-style: italic;
-    font-weight: 200;
+    font-weight: 600;
     margin-top: 2px;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 #result {
