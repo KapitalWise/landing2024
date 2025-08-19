@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex;justify-content: center; align-items: center;">
+    <div class="calculator">
+
+
+        <div class="top_info text-center">
+           <h4 class="ctitle">Financial Advisor Potential ROI Calculator</h4>
+        </div>
+<p id="result">Enter values to see your potential ROI.</p>
+
+<div class="slider-container">
+<div class="slider-label-wrap">
+<label for="leads">Leads Purchased Per Month:</label>
+<output id="leads-output">10</output>
+</div>
+
+<input type="range" id="leads" min="1" max="100" value="10" oninput="updateAndCalculate('leads', this)">
+</div>
+
+<div class="slider-container">
+<div class="slider-label-wrap">
+
+<label for="assets">Average Client Assets ($):</label>
+<output id="assets-output">150K</output>
+</div>
+<input type="range" id="assets" min="10000" max="1000000" step="5000" value="150000" oninput="updateAndCalculate('assets', this)">
+</div>
+
+<div class="slider-container">
+<div class="slider-label-wrap">
+
+<label for="tenure">Average Client Tenure (Years):</label>
+<output id="tenure-output">5</output>
+</div>
+<input type="range" id="tenure" min="1" max="30" value="5" oninput="updateAndCalculate('tenure', this)">
+</div>
+
+<div class="slider-container">
+<div class="slider-label-wrap">
+
+<label for="conversionRate">Average Conversion Rate (%):</label>
+<output id="conversionRate-output">33%</output>
+</div>
+<input type="range" id="conversionRate" min="1" max="100" value="33" oninput="updateAndCalculate('conversionRate', this)">
+</div>
+
+<div class="slider-container">
+<div class="slider-label-wrap">
+<label for="initialFee">Ongoing Engagement Fee (% of assets):</label>
+
+<output id="initialFee-output">1.5%</output>
+</div>
+
+<input type="range" id="initialFee" min="0" max="10" step="0.1" value="1.5" oninput="updateAndCalculate('initialFee', this)">
+</div>
+
+<!-- <div class="slider-container">
+<div class="slider-label-wrap">
+
+
+
+<label for="ongoingFee">Ongoing Yearly Fee ($):</label>
+<output id="ongoingFee-output">0</output>
+</div>
+<input type="range" id="ongoingFee" min="0" max="50000" step="1" value="0" oninput="updateAndCalculate('ongoingFee', this)">
+</div> -->
+<div style="padding-top: 30px; padding-bottom: 10px;justify-content: center;display: flex;">
+<a id="kw_lender_link" href ='https://calendly.com/jessica-kw/30min'>
+Book a Demo to Get Started
+</a>
+</div>
+
+
+</div>
+
+<script>
+
+
+    window.onload = function() {
+    
+  
+    
+    
+    };
+    
+    
+                         function updateSliderBackground(slider) {
+                             const value = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+                             slider.style.background = `linear-gradient(to right, #0E172A 0%, #0E172A ${value}%, #eee ${value}%, #eee 100%)`;
+                         }
+                 
+                         function updateAndCalculate(id, slider) {
+                             document.getElementById(`${id}-output`).textContent = formatOutput(id, slider.value);
+                             updateSliderBackground(slider);
+                             calculateROI();
+                         }
+                 
+                         document.querySelectorAll('input[type="range"]').forEach(slider => {
+                             updateSliderBackground(slider); // Initialize slider background on load
+                         });
+                 
+                         function formatOutput(id, value) {
+                             if (id === 'conversionRate' || id === 'initialFee' ) {
+                                 return `${value}%`;  // Format percentage values
+                             } else if (id === 'assets') {
+                                 return formatAssets(value);  // Format assets in 'K' format
+                                 
+                             } else {
+                                 return value;  // Default formatting
+                             }
+                         }
+                 
+                         function formatAssets(value) {
+                             const formattedValue = (value / 1000).toFixed(0) + 'K'; // Converts assets to 'K' format
+                             return formattedValue;
+                         }
+                 
+                         function calculateROI() {
+                             const leads = parseFloat(document.getElementById('leads').value);
+                             const assets = parseFloat(document.getElementById('assets').value);
+                             const tenure = parseFloat(document.getElementById('tenure').value);
+                             const conversionRate = parseFloat(document.getElementById('conversionRate').value);
+                             const initialFee = parseFloat(document.getElementById('initialFee').value);
+                             const ongoingFee = 0;
+                 
+                             function calculateEarnings(leadsPerMonth, avgClientAssets, initEngagementFee, ongoingYearlyFee, leadsConversionRate, tenureYears) {
+                                 avgClientAssets *= 1000;
+                                 leadsConversionRate /= 100;
+                                 // ongoingYearlyFee = ;
+                                 initEngagementFee /= 100;
+                 
+                                 const yearlyLeads = leadsPerMonth * 12;
+                                 const yearlyConvertedClients = yearlyLeads * leadsConversionRate;
+                                 const initialEngagementRevenue = avgClientAssets * initEngagementFee * yearlyConvertedClients;
+                 
+                                 let totalEarnings = 0;
+                                 let cumulativeOngoingFeeRevenue = 0;
+                 
+                                 let client_cost =40
+                 
+                                 if (avgClientAssets >= 100e3 && avgClientAssets < 200e3 )
+                                     client_cost = 60
+                                 if (avgClientAssets >= 200e3 && avgClientAssets < 300e3 )
+                                     client_cost = 80
+                                 if (avgClientAssets >= 300e3 && avgClientAssets < 500e3 )
+                                     client_cost = 90
+                                 if (avgClientAssets >= 500e3 && avgClientAssets < 1000e3 )
+                                     client_cost = 100
+                                 
+                                 if (avgClientAssets >= 1000e3 && avgClientAssets < 2000e3 )
+                                     client_cost = 120
+                                 
+                                 if (avgClientAssets >= 2000e3  )
+                                     client_cost = 150
+                                 
+                 
+                                 for (let year = 1; year <= tenureYears; year++) {
+                                     const yearlyOngoingFee = ongoingYearlyFee * yearlyConvertedClients;
+                                     cumulativeOngoingFeeRevenue += yearlyOngoingFee;
+                                     const yearlyProfit = initialEngagementRevenue + cumulativeOngoingFeeRevenue - yearlyLeads * client_cost;
+                                     totalEarnings += yearlyProfit;
+                                 }
+                 
+                                 return totalEarnings;
+                             }
+                 
+                             const deed = calculateEarnings(leads, assets / 1000, initialFee, ongoingFee, conversionRate, tenure);
+                             document.getElementById('result').innerHTML = `Over <span style='color:#2C40CE;font-weight:700;font-size:20px;'>${tenure}</span> years, you could earn approximately <span style='color:#2C40CE;font-weight:700;font-size:20px;'>$${deed.toLocaleString('en-GB', { maximumFractionDigits: 2 })}</span>`;
+                         }
+                         calculateROI()
+                     </script>
+<style>
+
+            
+.clac__::before {
+/* position: absolute;
+top: 0;
+right: 0;
+width: 50%;
+height: 100%;
+content: "";
+background-color: transparent;
+z-index: 1; */
+}
+
+#kw_lender_link{
+background-color: #2C40CE;
+color: #fff;
+padding: 15px 8px;
+font-size: 15px;
+border-radius: 5px;
+font-weight: 500; 
+border : 1px solid #2C40CE;
+}
+#kw_lender_link:hover{
+color: #2C40CE;
+background-color: #fff;
+
+}
+
+.slider-label-wrap {
+display: flex;
+justify-content: flex-start;
+padding: 5px 0px;
+}
+
+.ctitle{
+font-size: 17px;
+padding: 10px;
+font-weight: 600;
+}
+.calculator{
+    max-width: 600px;
+}
+
+
+@media (min-width: 992px) {
+    /* Your styles for large screens go here */
+    .calculator {
+        min-width: 550px;
+
+    }
+  }
+
+  @media (min-width: 792px ) and (max-width: 1201px){
+
+    .calculator {
+      min-width: 400px;
+
+  }
+  
+  }
+
+  
+@media (max-width: 991px)  {
+.calculator {
+padding-top: 40px;
+
+
+
+}
+
+
+
+#result {
+margin-top: 10px;
+font-size: 18px;}
+
+}
+.calculator {
+
+/* max-width: 600px; */
+margin: 0 0 0 20px;
+padding: 20px;
+background: #fff;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+z-index: 2;
+
+position: relative;
+
+/* margin-left: auto; */
+}
+h2, h3 {
+text-align: center;
+color: #141727;
+}
+.slider-container {
+/* margin: 20px 0; */
+}
+.slider-container label {
+display: block;
+margin-bottom: 11px;
+font-weight: 500;
+color: #000;
+/* margin-top: 15px; */
+font-size: 14px;
+line-height: 28px;
+font-family: "DM Sans", sans-serif
+}
+
+.slider-container input[type="range"] {
+-webkit-appearance: none;
+appearance: none;
+width: 100%;
+height: 6px;
+border-radius: 5px;
+outline: none;
+background: linear-gradient(to right, #141727 0%, #141727 50%, #eee 50%, #eee 100%);
+}
+.slider-container input[type="range"]::-webkit-slider-runnable-track {
+height: 5px;
+border-radius: 5px;
+}
+.slider-container input[type="range"]::-moz-range-track {
+height: 5px;
+border-radius: 5px;
+}
+.slider-container input[type="range"]::-ms-track {
+height: 5px;
+border-radius: 5px;
+background: transparent;
+border-color: transparent;
+color: transparent;
+}
+.slider-container input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 20px;
+height: 20px;
+background: #fff;
+border: 2px solid #141727;
+border-radius: 50%;
+margin-top: -8px;
+cursor: pointer;
+position: relative;
+}
+.slider-container input[type="range"]::-webkit-slider-thumb::after {
+content: "sss";
+}
+.slider-container input[type="range"]::-moz-range-thumb {
+width: 20px;
+height: 20px;
+background: #eee;
+border: 2px solid #141727;
+border-radius: 50%;
+cursor: pointer;
+}
+.slider-container input[type="range"]::-ms-thumb {
+width: 20px;
+height: 20px;
+background: #eee;
+border: 2px solid #141727;
+border-radius: 50%;
+cursor: pointer;
+}
+  .slider-container output {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+    font-style: italic;
+    font-weight: 200;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+#result {
+margin-bottom: 10px;
+font-size: 16px;
+text-align: left;
+font-weight: 500;
+color: #616161;
+background-color: #F3F5FF;
+padding: 25px;
+text-align: center;
+border-radius: 10px;
+}
+
+</style>
+</body>
+</html>
