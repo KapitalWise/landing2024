@@ -2,7 +2,7 @@
 
 
  $( document ).ready(function() { 
-      var essentialAmmount = 200;  
+      var essentialAmmount = 300;  
       var essentialMoAmmount = calculateMonthly(essentialAmmount);
       var formatter = new Intl.NumberFormat('en-US', {
               style: 'currency',
@@ -49,20 +49,20 @@
                $('#marketingHoursTxt').html("Free 90 Minutes Monthly Marketing and Content Strategy Consultation");
                $('#marketingHours').show();
             }
-            essentialAmmount = 200;  
+            essentialAmmount = 300;  
 
         
             if($(this).val()>2 &&$(this).val()<=102)
             {
-                essentialAmmount = 200+(($(this).val()-2) *16);                
+                essentialAmmount = 300+(($(this).val()-2) *16);                
             }
             if($(this).val()>102 &&$(this).val()<=202)
             {
-                essentialAmmount = 2000+(($(this).val()-102) *6);
+                essentialAmmount = 3000+(($(this).val()-102) *6);
             }
             if($(this).val()>202 &&$(this).val()<=502)
             {
-                  essentialAmmount = 2600+(($(this).val()-202) *2);
+                  essentialAmmount = 3600+(($(this).val()-202) *2);
             }
             essentialMoAmmount = calculateMonthly(essentialAmmount);
             if(!$("#monthlyYearly").is(':checked'))

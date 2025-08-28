@@ -6,7 +6,61 @@
    <title>Kapitalwise || Unified Client Acquisition and Retention Platform for Financial Advisors</title>
    <meta name="description" content="">
 
-   <head><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+   <script type="text/javascript">
+     
+         {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Kapitalwise",
+        "url": "https://www.kapitalwise.com/",
+        "logo": "https://www.kapitalwise.com/wp-content/uploads/2022/04/logo.png", 
+        "description": "Kapitalwise helps financial advisors grow their business by providing high-net-worth live investor leads and AI-driven engagement solutions.",
+        "foundingDate": "2018",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Sajil Koroth"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "43 W 23rd Street",
+          "addressLocality": "New York",
+          "addressRegion": "NY",
+          "postalCode": "10010",
+          "addressCountry": "US"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-862-263-0788",
+          "contactType": "Customer Support",
+          "email": "info@kapitalwise.com"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/kapitalwise/",
+          "https://twitter.com/kapitalwise",
+          "https://www.facebook.com/Kapitalwise/"
+        ],
+        "service": [
+          {
+            "@type": "FinancialService",
+            "name": "High Intent Investor Leads for Financial Advisors",
+            "description": "Kapitalwise provides financial professionals with access to pre-qualified high-net-worth investor leads."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Kapitalwise AI Engagement Platform",
+            "description": "AI-powered platform designed to enhance client engagement and lead conversion for financial professionals.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "url": "https://www.kapitalwise.com/"
+          }
+        ]
+      }
+
+   </script>
+
+   <script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
    <meta name="description" content="Kapitalwise offers a unified client acquisition and retention platform for Financial Institutions.
 Kapitalwise platform helps financial institutions to acquire and retain customers by connecting data, content, and interfacing.">
     <meta property="og:title" content="Unified Client Acquisition and Retention Platform for Financial Institutions">
@@ -19,6 +73,7 @@ Kapitalwise platform helps financial institutions to acquire and retain customer
 
    <!-- Favicons -->
    <link rel="icon" href="asset/img/favicons/favicon-32x32.png">
+   <link rel="stylesheet" href="asset/css/roi.css">
 
    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
    <link rel="stylesheet" href="asset/css/fontawsome.min.css">
@@ -280,9 +335,9 @@ Kapitalwise platform helps financial institutions to acquire and retain customer
    </div>
    <!-- ========== End mobile menu content ========== -->
    <!-- ========== Start hero baner area ========== -->
-   <section id="hero__baner">
+   <section id="hero__baner" class="clac__" style="position: relative;">
       <div class="container">
-         <div class="row">
+         <div class="row" style="align-items:center;">
             <div class="col-xl-6 col-lg-6">
                <div class="content">
                   <h1>The Leading Marketplace for High-intent Investor Prospects</h1>
@@ -291,9 +346,195 @@ Kapitalwise platform helps financial institutions to acquire and retain customer
                   <a class="right_button" href="https://app.kapitalwise.com/signup?isPublisher=true">Affiliate Signup</a>
                </div>
             </div>
-            <div class="col-xl-6 col-lg-6">
-               <div class="banner__image">
-                  <img class="img-fluid" src="asset/img/hero-banner.svg" alt="">
+            <div class="col-xl-6 col-lg-6" style="display: flex;justify-content: center; padding: 20px;">
+               <div class="banner__image" style="display: flex;">
+                  <div class="calculator">
+
+
+                                          <div class="top_info text-center">
+                                             <h4 class="ctitle">Financial Advisor ROI Calculator</h4>
+                                          </div>
+                     <p id="result">Enter values to see your potential ROI.</p>
+
+                     <div class="slider-container">
+                        <div class="slider-label-wrap">
+                         <label for="leads">Leads Purchased per Month:</label>
+                         <output id="leads-output">10</output>
+                        </div>
+
+                         <input type="range" id="leads" min="1" max="100" value="10" oninput="updateAndCalculate('leads', this)">
+                     </div>
+             
+                     <div class="slider-container">
+                        <div class="slider-label-wrap">
+
+                         <label for="assets">Average Client Assets ($):</label>
+                         <output id="assets-output">150K</output>
+                        </div>
+                         <input type="range" id="assets" min="10000" max="1000000" step="5000" value="150000" oninput="updateAndCalculate('assets', this)">
+                     </div>
+             
+                     <div class="slider-container">
+                        <div class="slider-label-wrap">
+
+                         <label for="tenure">Average Client Tenure (Years):</label>
+                         <output id="tenure-output">5</output>
+                        </div>
+                         <input type="range" id="tenure" min="1" max="30" value="5" oninput="updateAndCalculate('tenure', this)">
+                     </div>
+             
+                     <div class="slider-container">
+                        <div class="slider-label-wrap">
+
+                         <label for="conversionRate">Average Conversion Rate (%):</label>
+                         <output id="conversionRate-output">33%</output>
+                        </div>
+                         <input type="range" id="conversionRate" min="1" max="100" value="33" oninput="updateAndCalculate('conversionRate', this)">
+                     </div>
+             
+                     <div class="slider-container">
+                        <div class="slider-label-wrap">
+                           <label for="initialFee">Ongoing Engagement Fee (% of Assets):</label>
+
+                         <output id="initialFee-output">1.5%</output>
+</div>
+
+                         <input type="range" id="initialFee" min="0" max="10" step="0.1" value="1.5" oninput="updateAndCalculate('initialFee', this)">
+                     </div>
+             
+                     <!-- <div class="slider-container">
+                        <div class="slider-label-wrap">
+                   
+
+
+                         <label for="ongoingFee">Ongoing Yearly Fee ($):</label>
+                         <output id="ongoingFee-output">0</output>
+                        </div>
+                         <input type="range" id="ongoingFee" min="0" max="50000" step="1" value="0" oninput="updateAndCalculate('ongoingFee', this)">
+                     </div> -->
+                     <div style="padding-top: 30px; padding-bottom: 10px;justify-content: center;display: flex;">
+                        <a id="kw_lender_link" href ='./demo.html'>
+                           Book a Demo to Get Started
+                        </a>
+                     </div>
+                   
+             
+                 </div>
+             
+                 <script>
+
+
+window.onload = function() {
+
+fetch(
+            `https://calc.kapitalwise.com/latest/advisorConnect?companyId=60816b37039c884100eecfe4`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        }
+        ).then(res => res.json()).then(r=>{
+            // document.getElementById('kw_lender_link').childNodes[0].innerText = 'Connect me with a Financial Advisor'
+
+
+
+        
+            // document.getElementById('kw_lender_link').href= r.url
+
+            console.log(r)
+        })
+
+
+};
+
+
+                     function updateSliderBackground(slider) {
+                         const value = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+                         slider.style.background = `linear-gradient(to right, #0E172A 0%, #0E172A ${value}%, #eee ${value}%, #eee 100%)`;
+                     }
+             
+                     function updateAndCalculate(id, slider) {
+                         document.getElementById(`${id}-output`).textContent = formatOutput(id, slider.value);
+                         updateSliderBackground(slider);
+                         calculateROI();
+                     }
+             
+                     document.querySelectorAll('input[type="range"]').forEach(slider => {
+                         updateSliderBackground(slider); // Initialize slider background on load
+                     });
+             
+                     function formatOutput(id, value) {
+                         if (id === 'conversionRate' || id === 'initialFee' ) {
+                             return `${value}%`;  // Format percentage values
+                         } else if (id === 'assets') {
+                             return formatAssets(value);  // Format assets in 'K' format
+                             
+                         } else {
+                             return value;  // Default formatting
+                         }
+                     }
+             
+                     function formatAssets(value) {
+                         const formattedValue = (value / 1000).toFixed(0) + 'K'; // Converts assets to 'K' format
+                         return formattedValue;
+                     }
+             
+                     function calculateROI() {
+                         const leads = parseFloat(document.getElementById('leads').value);
+                         const assets = parseFloat(document.getElementById('assets').value);
+                         const tenure = parseFloat(document.getElementById('tenure').value);
+                         const conversionRate = parseFloat(document.getElementById('conversionRate').value);
+                         const initialFee = parseFloat(document.getElementById('initialFee').value);
+                         const ongoingFee = 0;
+             
+                         function calculateEarnings(leadsPerMonth, avgClientAssets, initEngagementFee, ongoingYearlyFee, leadsConversionRate, tenureYears) {
+                             avgClientAssets *= 1000;
+                             leadsConversionRate /= 100;
+                             // ongoingYearlyFee = ;
+                             initEngagementFee /= 100;
+             
+                             const yearlyLeads = leadsPerMonth * 12;
+                             const yearlyConvertedClients = yearlyLeads * leadsConversionRate;
+                             const initialEngagementRevenue = avgClientAssets * initEngagementFee * yearlyConvertedClients;
+             
+                             let totalEarnings = 0;
+                             let cumulativeOngoingFeeRevenue = 0;
+             
+                             let client_cost =40
+             
+                             if (avgClientAssets >= 100e3 && avgClientAssets < 200e3 )
+                                 client_cost = 60
+                             if (avgClientAssets >= 200e3 && avgClientAssets < 300e3 )
+                                 client_cost = 80
+                             if (avgClientAssets >= 300e3 && avgClientAssets < 500e3 )
+                                 client_cost = 90
+                             if (avgClientAssets >= 500e3 && avgClientAssets < 1000e3 )
+                                 client_cost = 100
+                             
+                             if (avgClientAssets >= 1000e3 && avgClientAssets < 2000e3 )
+                                 client_cost = 120
+                             
+                             if (avgClientAssets >= 2000e3  )
+                                 client_cost = 150
+                             
+             
+                             for (let year = 1; year <= tenureYears; year++) {
+                                 const yearlyOngoingFee = ongoingYearlyFee * yearlyConvertedClients;
+                                 cumulativeOngoingFeeRevenue += yearlyOngoingFee;
+                                 const yearlyProfit = initialEngagementRevenue + cumulativeOngoingFeeRevenue - yearlyLeads * client_cost;
+                                 totalEarnings += yearlyProfit;
+                             }
+             
+                             return totalEarnings;
+                         }
+             
+                         const deed = calculateEarnings(leads, assets / 1000, initialFee, ongoingFee, conversionRate, tenure);
+                         document.getElementById('result').innerHTML = `Over <span style='color:#2C40CE;font-weight:700;font-size:20px;'>${tenure}</span> years, you could earn approximately <span style='color:#2C40CE;font-weight:700;font-size:20px;'>$${deed.toLocaleString('en-GB', { maximumFractionDigits: 2 })}</span>`;
+                     }
+                     calculateROI()
+                 </script>
+             
+                  <!-- <img class="img-fluid" src="asset/img/hero-banner.svg" alt=""> -->
                </div>
             </div>
          </div>
@@ -991,6 +1232,12 @@ Platform <br>for Financial Advisors.</p>
                   <div class="link_area">
                      <h4>Resources</h4>
                      <ul>
+                        <li><a href="./products/advisorconnect_flexoffers.html" target="_blank">Join our Affiliate Program</a></li>
+                     </ul>
+                     <ul>
+                        <li><a href="./products/financial-advisor-lead-generation.html" target="_blank">Learn More About Pre-qualified Leads</a></li>
+                     </ul>
+                     <ul>
                         <li><a href="https://www.kapitalwise.com/blogs/" target="_blank">Blogs</a></li>
                      </ul>
                      <ul>
@@ -1000,7 +1247,7 @@ Platform <br>for Financial Advisors.</p>
                         <li><a href="mailto:support@kapitalwise.com" target="_blank">Contact Support</a></li>
                      </ul>
                      <ul>
-                        <li><a href="./TermsAndConditions.html" target="_blank">Terms of Service</a></li>
+                        <li><a href="./ClientTermsAndConditions.html" target="_blank">Terms of Service</a></li>
                      </ul>
                      <ul>
                         <li><a href="./PrivacyPolicy.html" target="_blank">Privacy Policy</a></li>
