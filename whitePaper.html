@@ -55,7 +55,7 @@ Kapitalwise platform helps financial institutions to acquire and retain customer
          var v_email = $( "#email" ).val();
          var v_name = $( "#name" ).val();
          var phone_number = $( "#phone-number" ).val();
-         if (isEmail(v_email))
+         if (isEmail(v_email) && isValidUSPhone(phone_number))
          {
             $.post( "https://kapitalwise.com/requestDemo",
                {
@@ -69,17 +69,35 @@ Kapitalwise platform helps financial institutions to acquire and retain customer
                }).done(function() {
                 
                 });
+            $.post( "https://hook.us2.make.com/zvotxq5156jkx8orierlkkqf0s17yw26",
+               {
+                  "name": v_name,
+                  "email": v_email,
+                  "phone_number": phone_number
+               }
+               ,function() {
+            
+
+               }).done(function() {
+                
+            });
             $( "#thankyou2" ).show();
             $( "#email" ).val('');
             $( "#name" ).val('');
             $( "#phone-number" ).val('');
          }
        });
+
+
     });
  
     function isEmail(email) {
      var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
      return regex.test(email);
+    }
+    function isValidUSPhone(phone) {
+        const phoneRegex = /^(\+1\s?|1\s?)?(\(?\d{3}\)?[\s.-]?)?\d{3}[\s.-]?\d{4}$/;
+        return phoneRegex.test(phone);
     }
 
     function mySubmitFunction(e) {
@@ -273,98 +291,66 @@ Kapitalwise platform helps financial institutions to acquire and retain customer
                   <div class="whitePaperContent">
                      <h1>Convert up to 10x More Wealth Management Prospects with AI</h1>
                      <h2 class="title-xl">Our Free Guide Shows How Top Advisors Achieve 15-25% Conversion Rates</h2>
-                     <p><b>While most advisors still convert less than 2%</b></p>
-                     <div class="free-guidebtn">
-                        <a href="#">Download Free Guide</a>
-                     </div>
-                     <p>The average financial advisor converts less than 2% of their leads.</p>
-                     <p>Top performers convert 15-25%.</p>
-                     <p>The difference?</p>
-                     <p>Top performers use proven systems. Most advisors rely on gut instinct.</p>
-                     <p>McKinsey projects 100,000 advisors will leave the industry by 2034. Meanwhile, 80% of affluent households say they'd pay a premium for human advice. The advisors capturing this growing demand use AI to identify which prospects will actually convert.</p>
+                     <p style="margin-top:20px;">The average financial advisor converts less than 2% of their leads. Top performers convert 15-25%.</p>
+                     <p><b>The difference?</b></p>
+                     <p>Top performers use proven systems. Most advisors rely on gut instinct. McKinsey projects 100,000 advisors will leave the industry by 2034. Meanwhile, 80% of affluent households say they'd pay a premium for human advice. The advisors capturing this growing demand use AI to identify which prospects will actually convert.</p>
                      
                      <h2 class="title-xl">This Guide Shows You:</h2>
-                     <ul>
-                        <li>✓ <strong>The AI framework</strong> that predicts which prospects will convert with 87% accuracy</li>
-                        <li>✓ <strong>The 4-phase nurture sequence</strong> that takes prospects from interest to signed agreement (why 7-12 touches work when most advisors quit after 2-3)</li>
-                        <li>✓ <strong>The exact tech stack</strong> top advisors use - and which expensive tools waste money</li>
-                        <li>✓ <strong>Lead scoring that works</strong> - know which prospects to call today vs. those needing more nurturing</li> 
-                        <li>✓ <strong>Real conversion math</strong> - how 13% improvement equals $260,000 in annual revenue</li>
+                     <ul >
+                        <li style="margin-top:20px;"><strong>The AI framework</strong> that predicts which prospects will convert with 87% accuracy</li>
+                        <li style="margin-top:20px;"><strong>The 4-phase nurture sequence</strong> that takes prospects from interest to signed agreement (why 7-12 touches work when most advisors quit after 2-3)</li>
+                        <li style="margin-top:20px;"><strong>The exact tech stack</strong> top advisors use - and which expensive tools waste money</li>
+                        <li style="margin-top:20px;"><strong>Lead scoring that works</strong> - know which prospects to call today vs. those needing more nurturing</li> 
+                        <li style="margin-top:20px;"><strong>Real conversion math</strong> - how 13% improvement equals $260,000 in annual revenue</li>
                      </ul>
 
 
                      <div class="content-section">
                         <h2 class="title-xl">Why We Created This Guide</h2>
-                        <p>We've built technology connecting financial advisors with pre-qualified investor prospects for years. After facilitating thousands of advisor-prospect connections, we see exactly what drives conversions.</p>
-                        <p>The data shows advisors using AI-enhanced approaches dramatically outperform those using traditional methods.</p>
-                        <p>This guide documents those winning strategies.</p>
+                        <p>We've built technology connecting financial advisors with pre-qualified investor prospects for years. After facilitating thousands of advisor-prospect connections, we see exactly what drives conversions. The data shows advisors using AI-enhanced approaches dramatically outperform those using traditional methods. This guide documents those winning strategies.</p>
                      </div>
 
                      <div class="content-section">
                         <h2 class="title-xl">Poor Conversion = Lost Revenue</h2>
                         <div class="conversion-comparison">
-                           <div class="conversion-item">
+                           <div style="margin-top:20px;" class="conversion-item">
                               <strong>100 leads at 2% conversion:</strong> 2 new clients = $40,000 annual revenue
                            </div>
-                           <div class="conversion-item">
+                           <div style="margin-top:20px;" class="conversion-item">
                               <strong>100 leads at 15% conversion:</strong> 15 new clients = $300,000 annual revenue
                            </div>
-                           <div class="revenue-loss">
-                              <strong>Your loss:</strong> $260,000 every year
+                           <div style="margin-top:20px;" class="revenue-loss">
+                              <strong>Your loss:</strong> $260,000 every year, plus 156 hours wasted on prospecting that doesn't work. While qualified prospects find your competition.
                            </div>
                         </div>
-                        <p>Plus 156 hours wasted on prospecting that doesn't work. While qualified prospects find your competition.</p>
+                       
                      </div>
 
                      <div class="content-section">
                         <h2 class="title-xl">For Advisors Who Want:</h2>
                         <ul class="list-style-disc">
-                           <li>Predictable lead flow (not feast-or-famine)</li>
-                           <li>Quality prospects without burning marketing budgets</li>
-                           <li>Technology that improves (not replaces) relationships</li>
-                           <li>Clear ROI on marketing spend</li>
+                           <li style="margin-top:10px;">Predictable lead flow (not feast-or-famine)</li>
+                           <li style="margin-top:10px;">Quality prospects without burning marketing budgets</li>
+                           <li style="margin-top:10px;">Technology that improves (not replaces) relationships</li>
+                           <li style="margin-top:10px;">Clear ROI on marketing spend</li>
                         </ul>
                      </div>
 
                      <div class="content-section">
                         <h2 class="title-xl">What You Get:</h2>
                         <ul class="list-style-disc">
-                           <li>Frameworks proven across hundreds of practices</li>
-                           <li>Wealth management-specific strategies</li>
-                           <li>Metrics that actually matter</li>
-                           <li>Steps you can implement today</li>
+                           <li style="margin-top:10px;">Frameworks proven across hundreds of practices</li>
+                           <li style="margin-top:10px;">Wealth management-specific strategies</li>
+                           <li style="margin-top:10px;">Metrics that actually matter</li>
+                           <li style="margin-top:10px;">Steps you can implement today</li>
                         </ul>
                      </div>
 
                      <div class="content-section">
-                        <h2 class="title-xl">Get Your Guide:</h2>
-                        <p>Join the ranks of financial advisors using modern, AI-powered lead generation.</p>
-                        <div class="cta-section">
-                           <div class="main__wrapper single__item h3"  id="thankyou"></div>
-                           <form  method="" autocomplete="off" id="subscribe" onsubmit="return mySubmitFunction(event)">
-                              <div class="subsform">
-                                 <div class="input__box">
-                                    <input type="email" id="nl-email" placeholder="Enter your email address" name="subscribe" required>
-                                 </div>
-                                 <div class="submit__box">
-                                    <button type="submit" id="nlsubscribe">Subscribe</button>
-                                 </div>
-                              </div>
-                           </form>
-                           <p class="unsubscribe-text">Unsubscribe anytime.</p>
-                        </div>
-                     </div>
-
-                     <div class="content-section">
-                        <div class="stat-highlight">
+                        <div style="margin-top:20px;" class="stat-highlight">
                            <strong>52% of investors now seek holistic advice.</strong> They're actively looking for advisors.
                         </div>
                         <p class="question">Will they find you or someone already using these strategies?</p>
-                     </div>
-
-                     <div class="content-section">
-                        <h4>About Kapitalwise</h4>
-                        <p>Kapitalwise connects financial advisors with pre-qualified investor prospects through AI-powered lead matching and automation. Learn more at <a href="www.kapitalwise.com">www.kapitalwise.com</a></p>
                      </div>
                   </div>
                </div>
@@ -373,26 +359,29 @@ Kapitalwise platform helps financial institutions to acquire and retain customer
                <div class="datePickerForm">
                   <div class="datepickerBox">
                   <div class="contactFormArea">
-                   <h5 id="thankyou2" style="margin-bottom: 20px; color:#000; text-align:center; display:none;">We will be in touch shortly! </h5>
+              
 
                     <form  method="" autocomplete="off" id="requestdemo" onsubmit="return mySubmitFunction(event)">
                      
                      <div class="form__box">
                         <div class="inputBox">
                            <label>Name*</label>
-                           <input type="text" id="name" placeholder="" name="name" required>
+                           <input style="font-weight: 100;" type="text" id="name" placeholder="Enter your Name" name="name" required>
                         </div>
                         <div class="inputBox">
                            <label>Email*</label>
-                           <input type="email" id="email" placeholder="" name="email" required>
+                           <input style="font-weight: 100;"  type="email" id="email" placeholder="Email to Receive the Download Link" name="email" required>
                         </div>
                         <div class="inputBox">
-                           <label>How can we help?*</label>
-                           <input type="text" id="phone-number" placeholder="" name="phone-number" required>
+                           <label>Phone Number*</label>
+                           <input style="font-weight: 100;"  type="text" id="phone-number" placeholder="Enter your Phone Number" name="phone-number" required>
                            
                         </div>
+                        <div>
+                             <h5 id="thankyou2" style="margin-bottom: 20px; color:#000; text-align:center; display:none;">We’ve sent you an email with the download link. Please check your inbox or spam folder for a message from info@kapitalwise.com</h5>
+                        </div>
                         <div class="submit__action">
-                           <button type="submit" id="req-demo">Submit</button>
+                           <button type="submit" id="req-demo">Request the Free Guide</button>
                         </div>
                      </div>
                      </form>
@@ -487,38 +476,38 @@ Kapitalwise platform helps financial institutions to acquire and retain customer
    //   $("#details").val(JSON.stringify(response, null, 4));
  
    // } , "jsonp");
-        $( document ).ready(function() {//
+        // $( document ).ready(function() {//
  
-           $( "#nlsubscribe" ).bind( "click", function() {
-                var v_email = $( "#nl-email" ).val();
-                if (isEmail(v_email))
-                {
+        //    $( "#nlsubscribe" ).bind( "click", function() {
+        //         var v_email = $( "#nl-email" ).val();
+        //         if (isEmail(v_email))
+        //         {
                    
-                   $.post( "https://kapitalwise.com/newsLetterSubscribe",{ email: v_email },function() {
+        //            $.post( "https://kapitalwise.com/newsLetterSubscribe",{ email: v_email },function() {
                 
  
-                   }).done(function() {
+        //            }).done(function() {
  
                     
-                   });
-                   $( "#thankyou" ).html("Thanks for signing up!");
-                   $( "#nl-email" ).hide(); 
-                   $( "#nlsubscribe" ).hide(); 
-                   $( "#nl-email" ).val("");
+        //            });
+        //            $( "#thankyou" ).html("Thanks for signing up!");
+        //            $( "#nl-email" ).hide(); 
+        //            $( "#nlsubscribe" ).hide(); 
+        //            $( "#nl-email" ).val("");
  
-                }
-           });
-         });
+        //         }
+        //    });
+        //  });
         
-        function isEmail(email) {
-         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-         return regex.test(email);
-        }
+        // function isEmail(email) {
+        //  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        //  return regex.test(email);
+        // }
  
-        function mySubmitFunction(e) {
-         e.preventDefault();
-         return false;
-        }
+        // function mySubmitFunction(e) {
+        //  e.preventDefault();
+        //  return false;
+        // }
  </script>
 </body>
 

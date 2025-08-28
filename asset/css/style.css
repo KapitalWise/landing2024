@@ -2569,6 +2569,8 @@ p {
 .white-paper #requestDemo .requestDemoRow .whitePaperContent h2 {
   margin-bottom: 10px;
   margin-top: 30px;
+  color: #737382;
+  font-weight: 400;
 }
 .white-paper #requestDemo .requestDemoRow .whitePaperContent h4 {
   margin-top: 24px;
