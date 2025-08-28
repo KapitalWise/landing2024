@@ -1,0 +1,146 @@
+// Styles specific to the White Paper page
+
+.white-paper {
+  // Page wrapper styles
+
+  // Example structure – customize as needed
+  .datePickerForm{
+    background-color: transparent !important;
+    .datepickerBox{
+        background-color: transparent !important;
+        padding: 0px !important;
+        width: 80% !important;
+    }
+    &:after{
+        display: none;
+    }
+  }
+  #requestDemo {
+        min-height: initial !important;
+        background-color: #fff;
+        position: relative;
+        overflow-x: initial !important;
+        z-index: 999;
+    .requestDemoRow{
+        align-items: flex-start;
+        .whitePaperContent{
+            padding: 50px 0px;
+            h1{
+                margin-bottom: 0px;
+                font-size: 45px;
+                font-weight: 700;
+            }
+            h2{
+                margin-bottom: 10px;
+                margin-top: 30px;
+         
+            }
+            h4 {
+                margin-top: 24px;
+                margin-bottom: 7px;
+            }
+            p{
+                color: #3B3C40;
+                margin-bottom: 10px;
+            }
+            .free-guidebtn{
+                a{
+                    margin-top:10px;
+                    display: inline-block;
+                    background-color: #2C40CE;
+                    color: #fff;
+                    font-weight: 500;
+                    padding: 13px 30px;
+                    min-width: 161px;
+                    border-radius: 8px;
+                    margin-bottom: 20px;
+                    &:hover{
+                        opacity: 0.9;
+                    }
+                }
+            }
+            .subsform{
+                display: flex;
+                width: 100%;
+                max-width: 480px;
+                margin-bottom: 10px;
+                .input__box{
+                    flex: 1;
+                    margin-right: 5px;
+                    input{
+                        width: 100%;
+                        height: 50px;
+                        border-radius: 10px;
+                        border: 1px solid #707070;
+                        padding: 0px 20px;
+                        color: #44464A;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+
+                button {
+                    background-color: #2C40CE;
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 15px;
+                    height: 100%;
+                    padding: 12px 50px;
+                    border: none;
+                    border-radius: 8px;
+                    width: 100%;
+                }
+                #thankyou2 {
+                    text-align: center;
+                    margin-top: 10px;
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+            }
+            .list-style-disc{
+                li{
+                    list-style: disc;
+                    list-style-position: inside;
+                }
+            }
+        }
+        .col-xl-5{
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+    .contactFormArea {
+        background-color: transparent !important;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        #requestdemo{
+            .form__box{
+                width: 100%;
+            }
+        }
+        form{
+            background-color: #fff;
+            border-radius: 10px;
+            .form__box{
+                margin-top: 0px !important;
+            }
+        }
+    }
+    &:after{
+        content: "";
+        width: 41.66%;
+        background: #f8b400;
+        right: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+  }
+}
+}
+
+
