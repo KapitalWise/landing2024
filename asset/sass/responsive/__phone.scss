@@ -732,4 +732,48 @@
         border-left: none;
     }
 
+    .white-paper{
+        #requestDemo{
+            .requestDemoRow{
+                .whitePaperContent{
+                    h1{
+                        font-size: 29px;
+                        line-height: 40px;
+                    } 
+                    h2{
+                        font-size: 15px;
+                        line-height: 24px;
+                    }
+                    ul {
+                        li{
+                            font-size: 15px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+                .col-xl-5{
+                    height: auto;
+                    position: initial;
+                    top: 0;
+                    background-color: #f8b400;
+                    .contactFormArea{
+                        min-height: auto !important;
+                    }
+                    .datePickerForm{
+                        padding: 30px 5px;
+                        .datepickerBox{
+                            width: 100% !important;
+                        }
+                    }
+                }
+                &:after{
+                    content: "";
+                    width: 100%;
+                    height: 22%;
+                    background:transparent;
+                }
+            }
+        }
+    }
+
 }
