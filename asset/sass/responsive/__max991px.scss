@@ -152,4 +152,35 @@
             margin-right: 0px;
         }
     }
+
+    .white-paper{
+        #requestDemo{
+            .requestDemoRow{
+                .whitePaperContent{
+                    h1{
+                        font-size: 35px;
+                        line-height: 48px;
+                    } 
+                    h2{
+                        font-size: 17px;
+                        line-height: 26px;
+                    }
+                }
+                .col-xl-5{
+                    height: auto;
+                    position: initial;
+                    top: 0;
+                    .contactFormArea{
+                        min-height: auto !important;
+                    }
+                }
+                &:after{
+                    content: "";
+                    width: 100%;
+                    height: 25%;
+                }
+            }
+        }
+    }
+
 }
